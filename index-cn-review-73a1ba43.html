@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球竞彩 · 稳定导航说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            color: #1d2b3e;
+            line-height: 1.7;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e8ecf0;
+            margin-bottom: 2.5rem;
+        }
+
+        .top-nav .logo {
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            color: #1d2b3e;
+            text-decoration: none;
+        }
+
+        .top-nav .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .top-nav .nav-links a {
+            color: #3f536e;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .top-nav .nav-links a:hover {
+            color: #0f1c2b;
+        }
+
+        /* 标题体系 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
+            margin-bottom: 0.6rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #5d6f85;
+            margin-bottom: 2rem;
+            border-left: 3px solid #d0d8e0;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.8rem 0;
+            color: #1f2a3a;
+            letter-spacing: 0.01em;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #2c3b4f;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #2c3b4f;
+        }
+
+        a {
+            color: #1f2a3a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #bcc6d0;
+            transition: text-decoration-color 0.2s;
+        }
+
+        a:hover {
+            text-decoration-color: #1f2a3a;
+        }
+
+        /* 三个场景卡片 */
+        .scenes-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.8rem 0 2.2rem;
+        }
+
+        .scene-card {
+            background: #ffffff;
+            border: 1px solid #e5e9ef;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .scene-card:hover {
+            border-color: #ced4de;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .scene-card .card-title {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #0f1c2b;
+        }
+
+        .scene-card p {
+            font-size: 0.92rem;
+            color: #3f536e;
+            margin-bottom: 0;
+        }
+
+        /* 常见说明 (FAQ摘要) */
+        .faq-block {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e8ecf0;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.15rem;
+            color: #1f2a3a;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #4d6078;
+            margin-bottom: 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e8ecf0;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #7b8b9e;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .page {
+                padding: 1.25rem 1rem 2.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .top-nav .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            .scene-card {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 顶部导航 -->
+        <nav class="top-nav">
+            <a href="https://index-cn-footballbet.com" class="logo">足球竞彩</a>
+            <div class="nav-links">
+                <a href="#intro">介绍</a>
+                <a href="#scenes">场景</a>
+                <a href="#faq">说明</a>
+            </div>
+        </nav>
+
+        <!-- 主标题 / hero 区域 -->
+        <h1>竞彩导航 · 稳定入口</h1>
+        <div class="subhead">
+            从一条清晰的路径开始，理解<strong>足球竞彩</strong>的信息组织方式。
+        </div>
+
+        <!-- 介绍段落 -->
+        <section id="intro">
+            <p>
+                对许多关注足球赛事的用户来说，<a href="https://index-cn-footballbet.com">足球竞彩</a>这个名称往往与赛事指数、赛前分析以及动态数据联系在一起。页面本身并不提供投注或交易功能，而是作为一个信息索引，将分散的竞彩相关资源聚合在统一的结构之下。无论你是初次接触还是希望快速定位常用页面，一个稳定、简洁的导航入口能节省大量检索时间。
+            </p>
+            <p>
+                本次介绍的页面采用极简布局，重点突出三个常见的使用场景，并在末尾整理了一些基础说明。整个页面的设计思路是：减少视觉干扰，让内容层级本身成为引导。如果你需要直接访问主站，可以随时点击上方或文内的链接。
+            </p>
+        </section>
+
+        <!-- 三个场景模块 -->
+        <section id="scenes">
+            <h2>三个典型使用场景</h2>
+            <div class="scenes-grid">
+                <div class="scene-card">
+                    <div class="card-title">① 信息浏览与对比</div>
+                    <p>用户打开页面后，通常先浏览当日赛事列表、赔率变化或历史数据。通过清晰的分类与筛选入口，可以快速对比不同场次的基础信息，而无需反复跳转。</p>
+                </div>
+                <div class="scene-card">
+                    <div class="card-title">② 赛前参考与笔记</div>
+                    <p>很多关注者习惯在赛前一小时查阅最新的指数波动、伤停新闻或天气影响。导航页将相关工具和统计模块集中排列，方便一边记录一边对照。</p>
+                </div>
+                <div class="scene-card">
+                    <div class="card-title">③ 日常访问与收藏</div>
+                    <p>对于长期使用者而言，将<a href="https://index-cn-footballbet.com">足球竞彩</a>加入浏览器书签或设为常用标签页，是一种低成本的保持信息同步的方式。导航结构稳定后，每次打开都能直接定位到感兴趣的区域。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见说明 (FAQ摘要) -->
+        <section id="faq" class="faq-block">
+            <h2>常见说明</h2>
+            <div class="faq-item">
+                <strong>页面是否包含实时数据？</strong>
+                <p>本介绍页为静态说明，不包含实时数据。主站上的数据模块通常由第三方接口提供，更新时间以各数据源标注为准。</p>
+            </div>
+            <div class="faq-item">
+                <strong>如何理解导航中的分类？</strong>
+                <p>分类主要依据赛事类型、数据分析工具以及常用链接进行划分，每个类别下又细分子项。如果你找不到某个特定内容，可以尝试使用站内搜索或浏览「全部」列表。</p>
+            </div>
+            <div class="faq-item">
+                <strong>移动端与桌面端体验是否有区别？</strong>
+                <p>两端的结构和内容一致，仅布局和交互方式做了适配。移动端采用纵向滚动与可折叠菜单，桌面端则保留更多横向导航元素。</p>
+            </div>
+            <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #5d6f85;">
+                以上说明基于常见使用者反馈整理，具体功能以主站实际页面为准。如需进一步了解，可直接前往 <a href="https://index-cn-footballbet.com">足球竞彩</a> 查阅。
+            </p>
+        </section>
+
+        <hr>
+        <div class="footer-note">
+            页面内容仅供信息参考 · 保持理性判断
+        </div>
+    </div>
+</body>
+</html>
