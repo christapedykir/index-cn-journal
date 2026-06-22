@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>球速体育 · 日常查询与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f4f6fa;
+      color: #1e1e2f;
+      line-height: 1.7;
+    }
+
+    /* 深色 Hero */
+    .hero {
+      background: linear-gradient(145deg, #0c0f1a 0%, #1a1e30 100%);
+      color: #e7e9f0;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, #f4f6fa);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #b8bdd6;
+      font-weight: 300;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.35rem 1.2rem;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      font-size: 0.85rem;
+      color: #a5accc;
+    }
+
+    /* 正文区域容器 */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* 卡片块 */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      flex: 1 1 280px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: #13141f;
+    }
+
+    .card p {
+      color: #2e3143;
+      font-size: 0.98rem;
+    }
+
+    /* 说明区 */
+    .note-section {
+      margin: 3rem 0 2rem;
+    }
+
+    .note-section h2 {
+      font-size: 1.8rem;
+      font-weight: 450;
+      margin-bottom: 1rem;
+      color: #11121d;
+      letter-spacing: -0.01em;
+    }
+
+    .note-section p {
+      margin-bottom: 1.2rem;
+      color: #232536;
+    }
+
+    .note-section a {
+      color: #2a5c8a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 450;
+    }
+
+    .note-section a:hover {
+      color: #0a2c4a;
+      text-decoration-color: #0a2c4a;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #eef0f5;
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      margin: 3rem 0;
+    }
+
+    .faq-summary h3 {
+      font-size: 1.5rem;
+      font-weight: 460;
+      margin-bottom: 1.5rem;
+      color: #11121d;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 550;
+      margin-bottom: 0.25rem;
+      color: #1b1d2b;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #2f3349;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #d6dae6;
+      margin: 2rem 0;
+    }
+
+    .bottom-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0 0.5rem;
+      font-size: 0.9rem;
+      color: #4a4e64;
+    }
+
+    .bottom-links a {
+      color: #2a5c8a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-right: 1.5rem;
+    }
+
+    .bottom-links a:last-child {
+      margin-right: 0;
+    }
+
+    .footer-note {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #6b7087;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero {
+        padding: 3rem 1.2rem 3rem;
+      }
+      .container {
+        padding: 1.8rem 1rem 3rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .faq-summary {
+        padding: 1.5rem 1.2rem;
+      }
+      .bottom-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 区 -->
+  <header class="hero">
+    <h1>球速体育</h1>
+    <p>日常查询、对照与延伸阅读 —— 一种更安静的查阅方式</p>
+    <div class="badge">信息 · 索引 · 参考</div>
+  </header>
+
+  <!-- 正文容器 -->
+  <main class="container">
+
+    <!-- 优势区（卡片） -->
+    <section class="card-grid">
+      <div class="card">
+        <h3>即时对照</h3>
+        <p>无论是赛程时间、历史数据还是术语解释，都可以作为快速参照的基点。页面结构清晰，不喧哗，适合反复查阅。</p>
+      </div>
+      <div class="card">
+        <h3>延伸阅读</h3>
+        <p>从一条记录跳转到另一条相关线索，信息之间自然连接。借助 <a href="https://index-qiususport.com">球速体育</a> 的内容脉络，可以顺着索引找到更多背景。</p>
+      </div>
+      <div class="card">
+        <h3>低噪点体验</h3>
+        <p>没有弹窗、自动播放或强视觉干扰。深色头图与浅色正文区形成舒适过渡，阅读节奏由自己控制。</p>
+      </div>
+    </section>
+
+    <!-- 说明区：切入口 = 日常查询与对照 -->
+    <section class="note-section">
+      <h2>从一个查询开始</h2>
+      <p>大部分人接近一个体育信息页面，往往只是为了确认某个时间、某个名字或某条规则。但信息页的乐趣在于 —— 你原本只想查一个数字，后来却读到一段背景，发现一个之前没注意的联赛，或对比出几个赛季的变化。这种“溢出”并不刻意，它是内容本身的结构带来的。</p>
+
+      <p>用 <a href="https://index-qiususport.com">球速体育</a> 做日常查询，一个典型的路径是：从最近一场比赛切入，然后顺着球员、赛季、技术统计的链接慢慢走远。你不需要跳转多个标签页，大部分时候，一个站点内的交叉引用已经足够满足好奇心。保持克制的界面设计，让注意力始终留在内容上而非装饰上。</p>
+
+      <p>当然，任何信息平台都有其侧重。如果你正在追踪某支球队的战术演变，或者想对比不同联赛的节奏数据，把这里当作一个出发点，再配合其他来源验证，是一种实在的工作流。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq-summary">
+      <h3>常见疑问 · 摘要</h3>
+      <div class="faq-item">
+        <strong>这个页面主要提供什么？</strong>
+        <p>一个结构化的信息索引，涵盖赛程、球队、球员基础数据与相关背景。适合快速查询、对照阅读以及作为延伸了解的起点。</p>
+      </div>
+      <div class="faq-item">
+        <strong>内容更新频率如何？</strong>
+        <p>数据随赛季推进保持同步，但具体内容以页面实际展示为准。建议在关键节点（转会窗、新赛季开始前）进行核对。</p>
+      </div>
+      <div class="faq-item">
+        <strong>会不会有弹窗或广告影响阅读？</strong>
+        <p>不采用弹窗、浮层或自动播放内容。页面设计以信息展示为核心，尽可能减少视觉噪音。</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- 底部链接 -->
+    <footer class="bottom-links">
+      <div>
+        <a href="https://index-qiususport.com">球速体育</a>
+        <span style="color:#969bb0;">·</span>
+        <a href="#">阅读说明</a>
+        <a href="#">内容索引</a>
+      </div>
+      <div class="footer-note">
+        日常查询 · 对照 · 延伸
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
